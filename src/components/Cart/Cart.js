@@ -8,15 +8,15 @@ const Cart = (props) => {
 
     let shipping = 0;
 
-    if(totalPrice > 0)
+    if(totalPrice > 0 && totalPrice <= 50)
     {
         shipping = 12.99;
     }
-    else if(totalPrice > 50 )
+    else if(totalPrice > 50 && totalPrice <= 100)
     {
         shipping = 4.99;
     }
-    else
+    else if(totalPrice > 100)
     {
         shipping = 0;
     }
