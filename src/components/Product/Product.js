@@ -1,8 +1,7 @@
 import React from 'react';
 import './Product.css';
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
 
 const Product = (props) => {
@@ -19,9 +18,7 @@ const Product = (props) => {
                 <p><small>by: {seller}</small></p>
                 <p>$ {price}</p>
                 <p><small>Only {stock} left in stock - order soon</small></p>
-
                 {props.showAddToCart === true && <button onClick={() => props.handleAddProduct(props.product)} className='addproductcart'> <FontAwesomeIcon icon={faShoppingCart} /> add to cart </button>}
-                
             </div>
         </div>
     );
