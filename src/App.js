@@ -7,6 +7,7 @@ import Inventory from './components/Inventory/Inventory';
 import Notfound from './components/NotFound/Notfound';
 import Review from './components/Review/Review';
 import Product from './components/Product/Product';
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
          <Route path="/review" element={<Review/>}/>
          <Route path="/inventory" element={<Inventory/>}/>
          <Route path="/product" element={<Product/>}/>
+         <Route path="/product/:productkey" element={<ProductDetail/>}/>
          <Route path="*" element={<Notfound/>}/>
       </Routes>
     </div>

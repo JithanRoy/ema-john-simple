@@ -12,6 +12,7 @@ const Shop = () => {
 
   const handleAddProduct = (product) => {
     const newCart = [...cart, product];
+    // setproducts(product);
     setcart(newCart);
     const sameProduct = newCart.filter((pd) => pd.key === product.key);
     const count = sameProduct.length;
